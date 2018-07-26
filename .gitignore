@@ -1,0 +1,10 @@
+*.iml
+*.ipr
+*.iws
+.gradle/
+build/
+gradle/
+out/
+gradlew*
+jetbrainsCredentials.gradle
+*.DS_Store

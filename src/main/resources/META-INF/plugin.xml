@@ -1,0 +1,20 @@
+<idea-plugin>
+    <id>com.chriscarini.jetbrains.environment-variable-settings-summary</id>
+    <name>Environment Variable Settings Summary</name>
+    <vendor url="https://jetbrains.chriscarini.com">Chris Carini</vendor>
+
+    <description><![CDATA[
+    A plugin that provides all system enviroment variables in a settings summary.
+    ]]></description>
+
+    <idea-version since-build="182" until-build="182.*"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <settingsSummaryFactory
+                implementation="com.chriscarini.jetbrains.settingssummary.environmentvariables.EnvironmentVariablesSettingsSummaryProblemType"/>
+    </extensions>
+</idea-plugin>
