@@ -12,8 +12,13 @@ repositories {
     mavenCentral()
 }
 
+test {
+    useTestNG()
+}
+
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile 'org.testng:testng:6.1.1'
+    testCompile "org.mockito:mockito-core:2.18.0"
 }
 
 intellij {
@@ -44,7 +49,7 @@ publishPlugin {
 }
 
 task checkJetBrainsCreds {
-    doLast{
+    doLast {
         println "Username: " + intellijPublishUsername
         println "Password " + (project.hasProperty('intellijPublishPassword') ? "IS" : "is NOT") + " set."
     }
