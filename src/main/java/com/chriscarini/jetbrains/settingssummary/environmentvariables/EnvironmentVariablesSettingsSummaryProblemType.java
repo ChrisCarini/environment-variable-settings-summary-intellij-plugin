@@ -7,6 +7,7 @@ import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * A Settings Summary {@link ProblemType} that provides all of the system environment variables.
@@ -30,7 +31,7 @@ public class EnvironmentVariablesSettingsSummaryProblemType implements ProblemTy
     public String collectInfo(@NotNull Project project) {
         final StringBuilder envVarStringBuilder = new StringBuilder();
         Map<String, String> envVar = getSystemEnvironmentVariables();
-        for (final String envName : envVar.keySet()) {
+        for (final String envName : envVar.keySet().stream().sorted().collect(Collectors.toList())) {
             envVarStringBuilder.append(String.format(ENV_VAR_FORMAT, envName, envVar.get(envName)));
         }
         return envVarStringBuilder.toString();
