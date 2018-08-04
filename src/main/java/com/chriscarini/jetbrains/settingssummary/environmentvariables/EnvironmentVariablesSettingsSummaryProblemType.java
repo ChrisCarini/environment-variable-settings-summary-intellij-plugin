@@ -1,7 +1,9 @@
 package com.chriscarini.jetbrains.settingssummary.environmentvariables;
 
+import com.chriscarini.jetbrains.messages.Messages;
 import com.intellij.openapi.project.Project;
 import com.intellij.settingsSummary.ProblemType;
+import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
@@ -10,6 +12,9 @@ import java.util.Map;
  * A Settings Summary {@link ProblemType} that provides all of the system environment variables.
  */
 public class EnvironmentVariablesSettingsSummaryProblemType implements ProblemType {
+    @NonNls
+    private static final String ENV_VAR_FORMAT = "%s:%s\n";
+
     /**
      * Provide a "friendly name" in the drop-down of the "Settings Summary" dialog.
      *
@@ -17,7 +22,7 @@ public class EnvironmentVariablesSettingsSummaryProblemType implements ProblemTy
      */
     @Override
     public String toString() {
-        return "Environment Variables";
+        return Messages.get("environment.variables");
     }
 
     @NotNull
@@ -26,7 +31,7 @@ public class EnvironmentVariablesSettingsSummaryProblemType implements ProblemTy
         final StringBuilder envVarStringBuilder = new StringBuilder();
         Map<String, String> envVar = getSystemEnvironmentVariables();
         for (final String envName : envVar.keySet()) {
-            envVarStringBuilder.append(String.format("%s:%s\n", envName, envVar.get(envName)));
+            envVarStringBuilder.append(String.format(ENV_VAR_FORMAT, envName, envVar.get(envName)));
         }
         return envVarStringBuilder.toString();
     }
