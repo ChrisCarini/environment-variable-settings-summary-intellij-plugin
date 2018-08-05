@@ -14,6 +14,11 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
+        <applicationService
+                serviceImplementation="com.chriscarini.jetbrains.settingssummary.environmentvariables.settings.SettingsManager"/>
+        <applicationConfigurable
+                instance="com.chriscarini.jetbrains.settingssummary.environmentvariables.settings.SettingsConfigurable"/>
+
         <settingsSummaryFactory
                 implementation="com.chriscarini.jetbrains.settingssummary.environmentvariables.EnvironmentVariablesSettingsSummaryProblemType"/>
     </extensions>

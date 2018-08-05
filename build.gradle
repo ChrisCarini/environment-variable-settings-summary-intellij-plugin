@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.chriscarini.jetbrains'
-version '0.0.1'
+version '0.0.2'
 
 sourceCompatibility = 1.8
 
@@ -30,6 +30,9 @@ patchPluginXml {
     changeNotes """
         <h4>[Unreleased]</h4>
         
+        <h4>[0.0.2] - 2018-08-04</h4>
+        <h5>Added</h5>
+        <ol><li>Settings for plugin to allow environment variables to be excluded from the summary output.</li></ol>
         <h4>[0.0.1] - 2018-07-25</h4>
         <h5>Added</h5>
         <ol><li>Initial release.</li></ol>
