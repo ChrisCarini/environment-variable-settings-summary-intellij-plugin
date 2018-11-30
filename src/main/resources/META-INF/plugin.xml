@@ -4,10 +4,10 @@
     <vendor url="https://jetbrains.chriscarini.com">Chris Carini</vendor>
 
     <description><![CDATA[
-    A plugin that provides all system enviroment variables in a settings summary.
+    A plugin that provides all system environment variables in a settings summary.
     ]]></description>
 
-    <idea-version since-build="182" until-build="182.*"/>
+    <idea-version since-build="183" until-build="183.*"/>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
