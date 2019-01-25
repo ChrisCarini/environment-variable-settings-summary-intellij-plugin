@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.chriscarini.jetbrains'
-version '0.0.3'
+version '0.0.4'
 
 sourceCompatibility = 1.8
 
@@ -14,6 +14,7 @@ repositories {
 
 test {
   useTestNG()
+  useJUnit()
 }
 
 dependencies {
@@ -22,12 +23,15 @@ dependencies {
 }
 
 intellij {
-  version '2018.3'
+  version '191.4212.41'
   plugins[]
   pluginName 'Environment Variable Settings Summary'
 }
 patchPluginXml {
   changeNotes """
+        <h4>[0.0.4] - 2019-01-24</h4>
+        <h5>Added</h5>
+        <ol><li>Prepare for 2019.1 release (based off of build 191.4212.41).</li></ol>
         <h4>[0.0.3] - 2018-11-30</h4>
         <h5>Added</h5>
         <ol><li>Upgrading for 2018.3.</li></ol>

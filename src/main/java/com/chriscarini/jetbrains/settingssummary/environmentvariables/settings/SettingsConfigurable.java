@@ -2,7 +2,7 @@ package com.chriscarini.jetbrains.settingssummary.environmentvariables.settings;
 
 import com.chriscarini.jetbrains.messages.Messages;
 import com.chriscarini.jetbrains.settingssummary.environmentvariables.EnvVarUtils;
-import com.chriscarini.jetbrains.settingssummary.environmentvariables.EnvironmentVariablesSettingsSummaryProblemType;
+import com.chriscarini.jetbrains.settingssummary.environmentvariables.EnvironmentVariablesSettingsSummary;
 import com.intellij.openapi.options.Configurable;
 import com.intellij.ui.JBColor;
 import com.intellij.ui.components.JBLabel;
@@ -42,8 +42,7 @@ public class SettingsConfigurable implements Configurable {
     setUserInputFieldFromSavedSettings();
 
     // Create a simple form to display the all current environment variables
-    final Map<String, String> sysEnvVar =
-        EnvironmentVariablesSettingsSummaryProblemType.getSystemEnvironmentVariables();
+    final Map<String, String> sysEnvVar = EnvironmentVariablesSettingsSummary.getSystemEnvironmentVariables();
     final FormBuilder envVarForm = FormBuilder.createFormBuilder();
     for (final String envName : EnvVarUtils.getSortedDistinctList(sysEnvVar.keySet())) {
       final JBTextField label = new JBTextField(envName);

@@ -3,7 +3,7 @@ package com.chriscarini.jetbrains.settingssummary.environmentvariables;
 import com.chriscarini.jetbrains.messages.Messages;
 import com.chriscarini.jetbrains.settingssummary.environmentvariables.settings.SettingsManager;
 import com.intellij.openapi.project.Project;
-import com.intellij.settingsSummary.ProblemType;
+import com.intellij.troubleshooting.TroubleInfoCollector;
 import java.util.List;
 import java.util.Map;
 import org.jetbrains.annotations.NonNls;
@@ -11,10 +11,10 @@ import org.jetbrains.annotations.NotNull;
 
 
 /**
- * A Settings Summary {@link ProblemType} that provides all of the system environment variables, minus the
+ * A Settings Summary {@link TroubleInfoCollector} that provides all of the system environment variables, minus the
  * environment variables that the user has explicitly excluded in the settings.
  */
-public class EnvironmentVariablesSettingsSummaryProblemType implements ProblemType {
+public class EnvironmentVariablesSettingsSummary implements TroubleInfoCollector {
   @NonNls
   private static final String ENV_VAR_FORMAT = "%s:%s\n";
 
@@ -30,7 +30,7 @@ public class EnvironmentVariablesSettingsSummaryProblemType implements ProblemTy
   /**
    * Provide a "friendly name" in the drop-down of the "Settings Summary" dialog.
    *
-   * @return The friendly name of this {@link ProblemType}
+   * @return The friendly name of this {@link TroubleInfoCollector}
    */
   @Override
   public String toString() {

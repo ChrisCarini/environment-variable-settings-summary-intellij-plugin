@@ -7,7 +7,7 @@
     A plugin that provides all system environment variables in a settings summary.
     ]]></description>
 
-  <idea-version since-build="183" until-build="183.*"/>
+  <idea-version since-build="183" until-build="191.*"/>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
        on how to target different products -->
@@ -19,7 +19,7 @@
     <applicationConfigurable
         instance="com.chriscarini.jetbrains.settingssummary.environmentvariables.settings.SettingsConfigurable"/>
 
-    <settingsSummaryFactory
-        implementation="com.chriscarini.jetbrains.settingssummary.environmentvariables.EnvironmentVariablesSettingsSummaryProblemType"/>
+    <troubleInfoCollector
+        implementation="com.chriscarini.jetbrains.settingssummary.environmentvariables.EnvironmentVariablesSettingsSummary"/>
   </extensions>
 </idea-plugin>

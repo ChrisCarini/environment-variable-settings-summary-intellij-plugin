@@ -6,7 +6,7 @@ import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.PropertyKey;
 
 
-public class Messages {
+public final class Messages {
   @NonNls
   private static final String BUNDLE = "messages.envVarMain";
 
