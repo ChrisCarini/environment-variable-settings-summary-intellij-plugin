@@ -1,25 +1,25 @@
 <idea-plugin>
-    <id>com.chriscarini.jetbrains.environment-variable-settings-summary</id>
-    <name>Environment Variable Settings Summary</name>
-    <vendor url="https://jetbrains.chriscarini.com">Chris Carini</vendor>
+  <id>com.chriscarini.jetbrains.environment-variable-settings-summary</id>
+  <name>Environment Variable Settings Summary</name>
+  <vendor url="https://jetbrains.chriscarini.com">Chris Carini</vendor>
 
-    <description><![CDATA[
+  <description><![CDATA[
     A plugin that provides all system environment variables in a settings summary.
     ]]></description>
 
-    <idea-version since-build="183" until-build="183.*"/>
+  <idea-version since-build="183" until-build="183.*"/>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
-    <depends>com.intellij.modules.platform</depends>
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService
-                serviceImplementation="com.chriscarini.jetbrains.settingssummary.environmentvariables.settings.SettingsManager"/>
-        <applicationConfigurable
-                instance="com.chriscarini.jetbrains.settingssummary.environmentvariables.settings.SettingsConfigurable"/>
+  <extensions defaultExtensionNs="com.intellij">
+    <applicationService
+        serviceImplementation="com.chriscarini.jetbrains.settingssummary.environmentvariables.settings.SettingsManager"/>
+    <applicationConfigurable
+        instance="com.chriscarini.jetbrains.settingssummary.environmentvariables.settings.SettingsConfigurable"/>
 
-        <settingsSummaryFactory
-                implementation="com.chriscarini.jetbrains.settingssummary.environmentvariables.EnvironmentVariablesSettingsSummaryProblemType"/>
-    </extensions>
+    <settingsSummaryFactory
+        implementation="com.chriscarini.jetbrains.settingssummary.environmentvariables.EnvironmentVariablesSettingsSummaryProblemType"/>
+  </extensions>
 </idea-plugin>

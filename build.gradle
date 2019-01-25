@@ -1,6 +1,6 @@
 plugins {
-    id 'java'
-    id 'org.jetbrains.intellij' version '0.3.5'
+  id 'java'
+  id 'org.jetbrains.intellij' version '0.3.5'
 }
 
 group 'com.chriscarini.jetbrains'
@@ -9,25 +9,25 @@ version '0.0.3'
 sourceCompatibility = 1.8
 
 repositories {
-    mavenCentral()
+  mavenCentral()
 }
 
 test {
-    useTestNG()
+  useTestNG()
 }
 
 dependencies {
-    testCompile 'org.testng:testng:6.1.1'
-    testCompile "org.mockito:mockito-core:2.18.0"
+  testCompile 'org.testng:testng:6.1.1'
+  testCompile "org.mockito:mockito-core:2.18.0"
 }
 
 intellij {
-    version '2018.3'
-    plugins[]
-    pluginName 'Environment Variable Settings Summary'
+  version '2018.3'
+  plugins[]
+  pluginName 'Environment Variable Settings Summary'
 }
 patchPluginXml {
-    changeNotes """
+  changeNotes """
         <h4>[0.0.3] - 2018-11-30</h4>
         <h5>Added</h5>
         <ol><li>Upgrading for 2018.3.</li></ol>
@@ -48,13 +48,13 @@ patchPluginXml {
 apply from: 'jetbrainsCredentials.gradle'
 
 publishPlugin {
-    username intellijPublishUsername
-    password intellijPublishPassword
+  username intellijPublishUsername
+  password intellijPublishPassword
 }
 
 task checkJetBrainsCreds {
-    doLast {
-        println "Username: " + intellijPublishUsername
-        println "Password " + (project.hasProperty('intellijPublishPassword') ? "IS" : "is NOT") + " set."
-    }
+  doLast {
+    println "Username: " + intellijPublishUsername
+    println "Password " + (project.hasProperty('intellijPublishPassword') ? "IS" : "is NOT") + " set."
+  }
 }
