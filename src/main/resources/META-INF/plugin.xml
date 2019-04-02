@@ -7,8 +7,6 @@
     A plugin that provides all system environment variables in a settings summary.
     ]]></description>
 
-  <idea-version since-build="183" until-build="191.*"/>
-
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
        on how to target different products -->
   <depends>com.intellij.modules.platform</depends>
