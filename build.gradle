@@ -5,7 +5,8 @@ buildscript {
     // see https://www.jetbrains.com/intellij-repository/releases/
     // and https://www.jetbrains.com/intellij-repository/snapshots/
     // To use/download EAP add '-EAP-SNAPSHOT' to the version, i.e. 'IU-191.6014.8-EAP-SNAPSHOT'
-    intellijVersion = '2019.2'
+    intellijVersion = '2019.3'
+//    intellijVersion = '193.3793.14-EAP-SNAPSHOT'
   }
 }
 
@@ -15,7 +16,7 @@ plugins {
 }
 
 group 'com.chriscarini.jetbrains'
-version '1.0.0'
+version '1.1.0'
 
 sourceCompatibility = javaVersion
 
@@ -45,13 +46,18 @@ intellij {
 
 patchPluginXml {
   changeNotes """
-        <h4>[1.0.0] - 2019-07-25</h4>
+        <h4>[1.1.0] - 2019-11-28</h4>
         <h5>Upgrade</h5>
         <ol>
-        <li>Upgrading to 2019.2.</li>
+        <li>Upgrading to 2019.3.</li>
+        </ol>
         <h5>Added</h5>
         <ol>
-        <li>"zh" locale under <a href="https://github.com/ChrisCarini/environment-variable-settings-summary-intellij-plugin/issues/3">#3</a> & <a href="https://github.com/ChrisCarini/environment-variable-settings-summary-intellij-plugin/pull/4">#4</a></li>
+        <li>N/A</li>
+        </ol>
+        <h5>Fixed</h5>
+        <ol>
+        <li>N/A</li>
         </ol>
         """
 }
