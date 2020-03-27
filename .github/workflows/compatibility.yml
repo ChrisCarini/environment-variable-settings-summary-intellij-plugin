@@ -1,0 +1,31 @@
+name: IntelliJ Plugin Compatibility
+
+on:
+  push:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  compatibility:
+    name: Ensure compatibility against the lowest and latest EAP version.
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v1
+
+      - name: Setup Java 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Build the plugin using Gradle
+        run: ./gradlew buildPlugin
+
+      - uses: thepieterdc/intellij-plugin-verifier-action@v1.1.0
+        with:
+          plugin: '/home/runner/work/environment-variable-settings-summary-intellij-plugin/environment-variable-settings-summary-intellij-plugin/build/distributions/environment-variable-settings-summary-intellij-plugin-*'
+          versions: |
+            2019.3
+            LATEST-EAP-SNAPSHOT
