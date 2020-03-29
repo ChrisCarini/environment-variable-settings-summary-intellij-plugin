@@ -27,7 +27,7 @@ jobs:
 
       - uses: thepieterdc/intellij-plugin-verifier-action@v1.1.0
         with:
-          plugin: '/home/runner/work/environment-variable-settings-summary-intellij-plugin/environment-variable-settings-summary-intellij-plugin/build/distributions/environment-variable-settings-summary-intellij-plugin-*'
+          plugin: '/home/runner/work/environment-variable-settings-summary-intellij-plugin/environment-variable-settings-summary-intellij-plugin/build/distributions/Environment\ Variable\ Settings\ Summary-*'
           versions: |
             2019.3
             LATEST-EAP-SNAPSHOT
