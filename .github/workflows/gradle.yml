@@ -26,7 +26,7 @@ jobs:
         env:
           IS_CI: "True"
 
-      - name: Upload Artifact
+      - name: Upload Artifact to Distributions
         if: github.event_name != 'pull_request'
         uses: actions/upload-artifact@master
         with:

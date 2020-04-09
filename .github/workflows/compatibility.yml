@@ -7,7 +7,7 @@ on:
 
 jobs:
   compatibility:
-    name: Ensure compatibility against the lowest and latest EAP version.
+    name: Ensure plugin compatibility against 2020.1 & the latest EAP snapshot for both IDEA Community, IDEA Ultimate.
 
     runs-on: ubuntu-latest
 
@@ -25,10 +25,18 @@ jobs:
         env:
           IS_CI: "True"
 
-      - uses: thepieterdc/intellij-plugin-verifier-action@v1.1.0
+      - name: Verify Plugin on IntelliJ Platforms
+        id: verify
+        uses: ChrisCarini/intellij-platform-plugin-verifier-action@v0.0.1
         with:
-          plugin: '/home/runner/work/environment-variable-settings-summary-intellij-plugin/environment-variable-settings-summary-intellij-plugin/build/distributions/Environment\ Variable\ Settings\ Summary-*'
-          versions: 2019.3
-#            2017.3
-#            2019.3
-#            LATEST-EAP-SNAPSHOT
+          verifier-version: '1.231'
+          ide-versions: |
+            ideaIC:2020.1
+            ideaIU:2020.1
+            ideaIC:LATEST-EAP-SNAPSHOT
+            ideaIU:LATEST-EAP-SNAPSHOT
+
+      - name: Get log file path and print contents
+        run: |
+          echo "The log file path is: ${{steps.verify.outputs.verification-output-log-filename}}" ;
+          cat ${{steps.verify.outputs.verification-output-log-filename}}
