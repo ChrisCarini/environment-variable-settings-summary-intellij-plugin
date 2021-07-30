@@ -1,5 +1,6 @@
 package com.chriscarini.jetbrains.settingssummary.environmentvariables.settings;
 
+import com.intellij.openapi.application.ApplicationManager;
 import com.chriscarini.jetbrains.settingssummary.environmentvariables.EnvVarUtils;
 import com.intellij.openapi.components.PersistentStateComponent;
 import com.intellij.openapi.components.RoamingType;
@@ -21,7 +22,7 @@ public class SettingsManager implements PersistentStateComponent<SettingsManager
   private EnvVarSettingsState myState;
 
   public static SettingsManager getInstance() {
-    return ServiceManager.getService(SettingsManager.class);
+    return ApplicationManager.getApplication().getService(SettingsManager.class);
   }
 
   @NotNull

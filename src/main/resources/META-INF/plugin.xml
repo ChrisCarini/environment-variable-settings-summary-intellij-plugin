@@ -13,7 +13,9 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <applicationService
-        serviceImplementation="com.chriscarini.jetbrains.settingssummary.environmentvariables.settings.SettingsManager"/>
+          serviceImplementation="com.chriscarini.jetbrains.settingssummary.environmentvariables.settings.SettingsManager"
+          preload="true"
+    />
     <applicationConfigurable
         instance="com.chriscarini.jetbrains.settingssummary.environmentvariables.settings.SettingsConfigurable"/>
 
