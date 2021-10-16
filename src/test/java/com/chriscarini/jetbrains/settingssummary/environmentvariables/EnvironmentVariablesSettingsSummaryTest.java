@@ -18,15 +18,15 @@ public class EnvironmentVariablesSettingsSummaryTest extends LightPlatformTestCa
     // Test
     final String info = new EnvironmentVariablesSettingsSummary().collectInfo(project);
 
-    for (Map.Entry env : System.getenv().entrySet()) {
-      final Object key = env.getKey();
-      assert key instanceof String;
+    for (Map.Entry<String, String> env : System.getenv().entrySet()) {
+      final String key = env.getKey();
+      assert key != null;
 
-      final Object value = env.getValue();
-      assert value instanceof String;
+      final String value = env.getValue();
+      assert value != null;
 
-      assert info.contains((String) key);
-      assert info.contains((String) value);
+      assert info.contains(key);
+      assert info.contains(value);
       assert info.contains(String.format("%s:%s", key, value));
     }
   }

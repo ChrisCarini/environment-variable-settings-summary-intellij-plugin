@@ -1,17 +1,17 @@
 package com.chriscarini.jetbrains.settingssummary.environmentvariables.settings;
 
-import com.intellij.openapi.application.ApplicationManager;
 import com.chriscarini.jetbrains.settingssummary.environmentvariables.EnvVarUtils;
+import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.PersistentStateComponent;
 import com.intellij.openapi.components.RoamingType;
-import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.components.State;
 import com.intellij.openapi.components.Storage;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 
 /**
