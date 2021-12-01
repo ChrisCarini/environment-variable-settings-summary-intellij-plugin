@@ -6,7 +6,6 @@
 ### Added
 
 ### Changed
-- Upgrading IntelliJ to 2021.3
 
 ### Deprecated
 
@@ -16,6 +15,10 @@
 
 ### Security
 
+## [2.5.2] - 2021-12-01
+### Changed
+- Upgrading IntelliJ to 2021.3
+
 ## [2.5.1] - 2021-10-12
 ### Added
 - Restructured file to extract all variables into file.
@@ -24,7 +27,6 @@
 - Update Dependabot to include Gradle dependencies.
 - Adding GitHub build & release workflows.
 - Adding JetBrains Qodana (experimental, testing only)
-
 
 ### Changed
 - Upgrading Gradle to 6.6
