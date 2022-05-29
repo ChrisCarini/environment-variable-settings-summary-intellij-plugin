@@ -8,7 +8,7 @@
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/ChrisCarini/environment-variable-settings-summary-intellij-plugin/IntelliJ%20Plugin%20Compatibility?label=IntelliJ%20Plugin%20Compatibility&logo=GitHub&style=flat-square)](https://github.com/ChrisCarini/environment-variable-settings-summary-intellij-plugin/actions?query=workflow%3A%22IntelliJ+Plugin+Compatibility%22)
 
 <!-- Plugin description -->
-A JetBrains IntelliJ IDEA plugin which provides a Settings Summary listing all Environment Variables.
+A plugin for JetBrains IDEs providing a Settings Summary listing all Environment Variables.
 <!-- Plugin description end -->
 
 Tested in IntelliJ, but _should_ work on other JetBrains IDEs.
