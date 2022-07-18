@@ -3,6 +3,8 @@ package com.chriscarini.jetbrains.settingssummary.environmentvariables;
 import com.intellij.openapi.project.Project;
 import com.intellij.testFramework.LightPlatformTestCase;
 import java.util.Map;
+
+import org.junit.Test;
 import org.mockito.Mockito;
 
 
@@ -12,6 +14,7 @@ public class EnvironmentVariablesSettingsSummaryTest extends LightPlatformTestCa
     super.setUp();
   }
 
+  @Test
   public void testCollectInfo() {
     // Mock a {@link Project} to pass into the {@link ProblemType#collectInfo()} call.
     final Project project = Mockito.mock(Project.class);
