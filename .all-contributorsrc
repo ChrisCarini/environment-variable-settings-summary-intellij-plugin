@@ -23,6 +23,17 @@
         "question",
         "review"
       ]
+    },
+    {
+      "login": "baron1405",
+      "name": "Baron Roberts",
+      "avatar_url": "https://avatars.githubusercontent.com/u/989635?v=4",
+      "profile": "https://www.cthing.com",
+      "contributions": [
+        "ideas",
+        "maintenance",
+        "userTesting"
+      ]
     }
   ]
 }
