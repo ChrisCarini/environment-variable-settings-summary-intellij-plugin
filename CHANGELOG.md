@@ -7,7 +7,6 @@
 ### Added
 
 ### Changed
-- Upgrading IntelliJ from 2023.3.1 to 2023.3.2
 
 ### Deprecated
 
@@ -16,6 +15,11 @@
 ### Fixed
 
 ### Security
+
+## [3.2.2] - 2023-12-21
+
+### Changed
+- Upgrading IntelliJ from 2023.3.1 to 2023.3.2
 
 ## [3.2.1] - 2023-12-14
 
@@ -221,7 +225,8 @@
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.com/ChrisCarini/environment-variable-settings-summary-intellij-plugin/compare/v3.2.1...HEAD
+[Unreleased]: https://github.com/ChrisCarini/environment-variable-settings-summary-intellij-plugin/compare/v3.2.2...HEAD
+[3.2.2]: https://github.com/ChrisCarini/environment-variable-settings-summary-intellij-plugin/compare/v3.2.1...v3.2.2
 [3.2.1]: https://github.com/ChrisCarini/environment-variable-settings-summary-intellij-plugin/compare/v3.2.0...v3.2.1
 [3.2.0]: https://github.com/ChrisCarini/environment-variable-settings-summary-intellij-plugin/compare/v3.1.5...v3.2.0
 [3.1.5]: https://github.com/ChrisCarini/environment-variable-settings-summary-intellij-plugin/compare/v3.1.4...v3.1.5
