@@ -7,7 +7,6 @@
 ### Added
 
 ### Changed
-- Upgrading IntelliJ from 2024.3.5 to 2025.1
 
 ### Deprecated
 
@@ -16,6 +15,12 @@
 ### Fixed
 
 ### Security
+
+## [5.0.0] - 2025-04-17
+
+### Changed
+
+- Upgrading IntelliJ from 2024.3.5 to 2025.1
 
 ## [4.2.8] - 2025-03-19
 
@@ -412,7 +417,8 @@
 
 - Initial release.
 
-[Unreleased]: https://github.com/ChrisCarini/environment-variable-settings-summary-intellij-plugin/compare/v4.2.8...HEAD
+[Unreleased]: https://github.com/ChrisCarini/environment-variable-settings-summary-intellij-plugin/compare/v5.0.0...HEAD
+[5.0.0]: https://github.com/ChrisCarini/environment-variable-settings-summary-intellij-plugin/compare/v4.2.8...v5.0.0
 [4.2.8]: https://github.com/ChrisCarini/environment-variable-settings-summary-intellij-plugin/compare/v4.2.7...v4.2.8
 [4.2.7]: https://github.com/ChrisCarini/environment-variable-settings-summary-intellij-plugin/compare/v4.2.6...v4.2.7
 [4.2.6]: https://github.com/ChrisCarini/environment-variable-settings-summary-intellij-plugin/compare/v4.2.5...v4.2.6
