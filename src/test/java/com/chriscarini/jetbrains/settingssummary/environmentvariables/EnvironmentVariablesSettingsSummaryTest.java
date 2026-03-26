@@ -1,14 +1,14 @@
 package com.chriscarini.jetbrains.settingssummary.environmentvariables;
 
 import com.intellij.openapi.project.Project;
-import com.intellij.testFramework.LightPlatformTestCase;
+import com.intellij.testFramework.fixtures.BasePlatformTestCase;
 import java.util.Map;
 
 import org.junit.Test;
 import org.mockito.Mockito;
 
 
-public class EnvironmentVariablesSettingsSummaryTest extends LightPlatformTestCase {
+public class EnvironmentVariablesSettingsSummaryTest extends BasePlatformTestCase {
   @Override
   public void setUp() throws Exception {
     super.setUp();
