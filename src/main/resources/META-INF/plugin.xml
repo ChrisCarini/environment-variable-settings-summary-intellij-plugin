@@ -16,6 +16,8 @@
           serviceImplementation="com.chriscarini.jetbrains.settingssummary.environmentvariables.settings.SettingsManager"
     />
     <applicationConfigurable
+        key="environment.variables.settings"
+        bundle="messages.envVarMain"
         instance="com.chriscarini.jetbrains.settingssummary.environmentvariables.settings.SettingsConfigurable"/>
 
     <troubleInfoCollector

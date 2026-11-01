@@ -14,6 +14,8 @@
 
 ### Fixed
 
+- Declare the localized settings display name in the plugin descriptor to avoid a `PluginException` when opening Settings or searching actions.
+
 ### Security
 
 ## [6.1.5] - 2026-10-30
